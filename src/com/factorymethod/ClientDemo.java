@@ -1,6 +1,6 @@
 package com.factorymethod;
 
-public class FactoryMethodDemo {
+public class ClientDemo {
 
 	public static void main(String[] args) {
 		AbstractCourseFactory onlineFac = new OnlineCourseFactory();
