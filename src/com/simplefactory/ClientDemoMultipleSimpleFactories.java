@@ -2,7 +2,7 @@ package com.simplefactory;
 
 import com.models.AbstractCourse;
 
-public class MultipleSimpleFactoryDemo {
+public class ClientDemoMultipleSimpleFactories {
 
 	public static void main(String[] args) {
 		OnlineSimpleCourseFactory onlineFactory = new OnlineSimpleCourseFactory();

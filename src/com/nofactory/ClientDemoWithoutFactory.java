@@ -4,7 +4,7 @@ import com.models.AbstractCourse;
 import com.models.JavaCourse;
 import com.models.NetCourse;
 
-public class WithoutFactory {
+public class ClientDemoWithoutFactory {
 
 	public static void main(String[] args) {
 		AbstractCourse course = null;

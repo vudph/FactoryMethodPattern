@@ -2,7 +2,7 @@ package com.simplefactory;
 
 import com.models.AbstractCourse;
 
-public class SimpleFactoryDemo {
+public class ClientDemoSimpleFactory {
 
 	public static void main(String[] args) {
 		SimpleCourseFactory factory = new SimpleCourseFactory();
