@@ -1,7 +1,7 @@
 # FactoryMethodPattern
 
 
-## 1. Without factory
+## 1. Without Factory
 
 ```java
 public abstract class AbstractCourse {
