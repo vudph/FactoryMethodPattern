@@ -2,6 +2,7 @@
 
 1. Without factory
 --------------
+
 ```java
 public abstract class AbstractCourse {
 	protected float duration;
@@ -68,6 +69,7 @@ public class ClientDemoWithoutFactory {
 
 2. SimpleFactory
 --------------
+
 ```java
 public class SimpleCourseFactory {
 	public AbstractCourse createCourse(String input) {
@@ -97,6 +99,7 @@ public class ClientDemoSimpleFactory {
 
 2.1 Advantages of SimpleFactory
 --------------
+
 * Whenever new course will be introduced, the one which gets changed is factory not in client code.
 * As SimpleFactory is class with createCourse method which anyone can use it who have access. In short Course logic now can be reused.
   
@@ -104,6 +107,7 @@ NOTE: this is not Factory Method pattern. It's just a programming idiom.
 
 2.2 Problems of SimpleFactory
 --------------
+
 What happens if we will serve new courses both online and offline courses? OnJavaCoure, OffJavaCourse, OnNetCourse, OffNetCourse
 * New added classes are derived from AbstractCourse, adding more case conditions in a SimpleFactory => violates SOLID Principle SRP – Single Responsibility Principle. (SRP says a class should have only one reason to change.). And here SimpleFactory class will be changed
 * Whenever new offline and online course introduces or modified.
@@ -112,6 +116,7 @@ How about if we create multiple simple factories separately for online and offli
 
 2.3 Mutilple SimpleFactory
 --------------
+
 ```java
 public class OnlineSimpleCourseFactory {
 	public AbstractCourse createCourse(String input) {
@@ -171,10 +176,12 @@ public class ClientDemoMultipleSimpleFactories {
 
 2.4 Problem of MultipleSimpleFactories
 --------------
+
 * Every factory is independent here. There is no strict rule for defining factories. In this approach each factory can have their own structure and standards.
 
 3. Factory Method pattern
 --------------
+
 ```java
 public abstract class AbstractCourseFactory {	
 	public void displayCourseDetails(String input) {
@@ -240,14 +247,16 @@ public class ClientDemoFactoryMethod {
 
 What problem Factory Method solves?
 --------------
+
 Factory Method solves the problem of how to create an object that conform to abstract interface in a way that separates the responsibility for creating the object from the client which will use the object.
 
 Diagrams
 --------------
-- Base class diagram
+
+* Base class diagram
 
 ![alt text](https://github.com/vudph/FactoryMethodPattern/blob/master/resources/BasePattern.png "Base Diagram")
 
-- With 2 concrete factories
+* With 2 concrete factories
 
 ![alt text](https://github.com/vudph/FactoryMethodPattern/blob/master/resources/FactoryMethod.png "Class Diagram")
